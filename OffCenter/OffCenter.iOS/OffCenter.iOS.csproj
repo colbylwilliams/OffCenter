@@ -106,10 +106,55 @@
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\logo_mobile_center.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_analytics.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_build.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_crashes.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_distribute.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_identity.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_tables.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_test.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_test.imageset\i_beacon_test.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_tables.imageset\i_beacon_tables.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_identity.imageset\i_beacon_identity.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_distribute.imageset\i_beacon_distribute.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_crashes.imageset\i_beacon_crashes.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_build.imageset\i_beacon_build.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_beacon_analytics.imageset\i_beacon_analytics.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_tab_user.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_tab_user.imageset\i_tab_user.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_tab_apps.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_tab_apps.imageset\i_tab_apps.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_blue.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_purple.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_orange.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_yellow.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_green.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_green.imageset\i_app_icon_default_green.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_yellow.imageset\i_app_icon_default_yellow.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_orange.imageset\i_app_icon_default_orange.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_purple.imageset\i_app_icon_default_purple.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_app_icon_default_blue.imageset\i_app_icon_default_blue.pdf" />
+    <ImageAsset Include="Assets.xcassets\i_tab_history.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\i_tab_history.imageset\i_tab_history.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\logo_mobile_center.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_analytics.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_build.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_crashes.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_distribute.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_identity.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_tables.imageset\" />
+    <Folder Include="Assets.xcassets\i_beacon_test.imageset\" />
+    <Folder Include="Assets.xcassets\i_tab_user.imageset\" />
+    <Folder Include="Assets.xcassets\i_tab_apps.imageset\" />
+    <Folder Include="Assets.xcassets\i_app_icon_default_blue.imageset\" />
+    <Folder Include="Assets.xcassets\i_app_icon_default_purple.imageset\" />
+    <Folder Include="Assets.xcassets\i_app_icon_default_orange.imageset\" />
+    <Folder Include="Assets.xcassets\i_app_icon_default_yellow.imageset\" />
+    <Folder Include="Assets.xcassets\i_app_icon_default_green.imageset\" />
+    <Folder Include="Assets.xcassets\i_tab_history.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -139,6 +184,15 @@
     <Compile Include="LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="BeaconTableViewController.cs" />
+    <Compile Include="BeaconTableViewController.designer.cs">
+      <DependentUpon>BeaconTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeaconTableViewCell.cs" />
+    <Compile Include="BeaconTableViewCell.designer.cs">
+      <DependentUpon>BeaconTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\Colors.cs" />
   </ItemGroup>
   <Import Project="..\NomadCode.UIExtensions\NomadCode.UIExtensions.projitems" Label="Shared" Condition="Exists('..\NomadCode.UIExtensions\NomadCode.UIExtensions.projitems')" />
   <Import Project="..\NomadCode.MobileCenter\NomadCode.MobileCenter.projitems" Label="Shared" Condition="Exists('..\NomadCode.MobileCenter\NomadCode.MobileCenter.projitems')" />

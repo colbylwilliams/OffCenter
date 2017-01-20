@@ -11,4 +11,8 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)MyClass.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Beacons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bootstrap.cs" />
+  </ItemGroup>
 </Project>

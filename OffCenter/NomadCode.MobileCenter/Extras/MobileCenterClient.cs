@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Rest;
 
 using NomadCode.MobileCenter.Models;
+using System.Linq;
 
 namespace NomadCode.MobileCenter
 {
@@ -85,7 +86,9 @@ namespace NomadCode.MobileCenter
 			{
 				var appsObj = await mobileCenterClient.Account.GetAppsAsync ();
 
-				Apps = appsObj as List<AppResponse>;
+				var apps = appsObj as List<AppResponse>;
+
+				Apps = apps.OrderBy (a => a.DisplayName).ToList ();
 
 				return Apps?.Count > 0;
 			}

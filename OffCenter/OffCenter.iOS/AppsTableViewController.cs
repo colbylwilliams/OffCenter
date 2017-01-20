@@ -8,6 +8,7 @@ using UIKit;
 using NomadCode.MobileCenter;
 using NomadCode.MobileCenter.Models;
 using NomadCode.UIExtensions;
+using System.Linq;
 
 
 namespace OffCenter.iOS
@@ -65,7 +66,78 @@ namespace OffCenter.iOS
 
 			cell.DetailTextLabel.Text = $"for {app.Os}";
 
+			cell.ImageView.Image = UIImage.FromBundle (getDefaultIcon (app.DisplayName));
+
+			var label = cell.ImageView.Subviews.FirstOrDefault () as UILabel;
+
+			if (label == null)
+			{
+				label = new UILabel { Font = UIFont.SystemFontOfSize (22), TextAlignment = UITextAlignment.Center };
+
+				cell.ImageView.AddSubview (label);
+
+				label.ConstrainToFitParent (cell.ImageView);
+			}
+
+			label.TextColor = getDefaultIconTextColor (app.DisplayName);
+
+			label.Text = char.ToUpperInvariant (app.DisplayName.FirstOrDefault ()).ToString ();
+
+
+			if (indexPath.Row % 3 == 0)
+			{
+				cell.Accessory = UITableViewCellAccessory.None;
+			}
+			else
+			{
+				cell.TintColor = UIColor.Green;
+				cell.Accessory = UITableViewCellAccessory.Checkmark;
+			}
+
 			return cell;
 		}
+
+
+		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+		{
+			var controller = Storyboard.Instantiate<BeaconTableViewController> ();
+
+			ShowViewController (controller, this);
+		}
+
+		string getDefaultIcon (string name)
+		{
+			var firstLetter = char.ToLowerInvariant (name.FirstOrDefault ());
+
+			if (firstLetter < 'p') return "i_app_icon_default_green";
+
+			if (firstLetter < 's') return "i_app_icon_default_yellow";
+
+			if (firstLetter < 't') return "i_app_icon_default_orange";
+
+			if (firstLetter < 'u') return "i_app_icon_default_purple";
+
+			if (firstLetter < 'x') return "i_app_icon_default_blue";
+
+			return "i_app_icon_default_green";
+		}
+
+		UIColor getDefaultIconTextColor (string name)
+		{
+			var firstLetter = char.ToLowerInvariant (name.FirstOrDefault ());
+
+			if (firstLetter < 'p') return Colors.DefaultIconText.Green;
+
+			if (firstLetter < 's') return Colors.DefaultIconText.Yellow;
+
+			if (firstLetter < 't') return Colors.DefaultIconText.Orange;
+
+			if (firstLetter < 'u') return Colors.DefaultIconText.Purple;
+
+			if (firstLetter < 'x') return Colors.DefaultIconText.Blue;
+
+			return Colors.DefaultIconText.Green;
+		}
+
 	}
 }
