@@ -11,6 +11,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OffCenter.Unified", "OffCen
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NomadCode.MobileCenter", "NomadCode.MobileCenter\NomadCode.MobileCenter.shproj", "{A85C1184-727A-4D94-AC9D-8F8CEA58B23C}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NomadCode.UIExtensions", "NomadCode.UIExtensions\NomadCode.UIExtensions.shproj", "{07555EA6-44F7-4889-974F-8191391705EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator

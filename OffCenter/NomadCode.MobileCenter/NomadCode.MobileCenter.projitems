@@ -203,5 +203,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\XcodeScheme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\XcodeSchemeContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\XcodeVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Keys\Keys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extras\MobileCenterClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extras\Keychain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Extras\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Keys\" />
   </ItemGroup>
 </Project>

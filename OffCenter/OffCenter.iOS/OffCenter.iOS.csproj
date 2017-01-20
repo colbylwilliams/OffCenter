@@ -29,6 +29,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType></DebugType>
@@ -63,6 +64,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -102,9 +104,12 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\logo_mobile_center.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\logo_mobile_center.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -118,11 +123,24 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="AppsTableViewController.cs" />
+    <Compile Include="AppsTableViewController.designer.cs">
+      <DependentUpon>AppsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppsTableViewCell.cs" />
+    <Compile Include="AppsTableViewCell.designer.cs">
+      <DependentUpon>AppsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginNavigationController.cs" />
+    <Compile Include="LoginNavigationController.designer.cs">
+      <DependentUpon>LoginNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="..\NomadCode.UIExtensions\NomadCode.UIExtensions.projitems" Label="Shared" Condition="Exists('..\NomadCode.UIExtensions\NomadCode.UIExtensions.projitems')" />
   <Import Project="..\NomadCode.MobileCenter\NomadCode.MobileCenter.projitems" Label="Shared" Condition="Exists('..\NomadCode.MobileCenter\NomadCode.MobileCenter.projitems')" />
   <Import Project="..\OffCenter.Shared\OffCenter.Shared.projitems" Label="Shared" Condition="Exists('..\OffCenter.Shared\OffCenter.Shared.projitems')" />
   <Import Project="..\OffCenter.Unified\OffCenter.Unified.projitems" Label="Shared" Condition="Exists('..\OffCenter.Unified\OffCenter.Unified.projitems')" />
